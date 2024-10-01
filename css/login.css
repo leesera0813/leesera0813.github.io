@@ -1,0 +1,148 @@
+* {margin: 0; padding: 0;}
+
+body {
+    height: 830px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+}
+
+.loginWrap {
+    width: 600px;
+    padding: 30px 0;
+    background-color: #fff;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+}
+    
+
+/* 로고 가운데 배열 */
+.loginLogo{
+    margin: 20px;
+    text-align: center;
+}
+
+.loginWrap form {
+    width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginWrap form input {
+    width: 300px;
+    height: 50px;
+    background: #eeeeee;
+    border: none;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+input:focus {
+    outline-color: #000; /* 플레이스홀더 테두리 색상 */
+}
+/* 플레이스홀더 안 텍스트 색상변경
+input::placeholder {color:#606060;}
+input::-webkit-input-placeholder {color:#606060;}
+input:-ms-input-placeholder {color:#606060;} */
+
+
+.loginWrap form div {
+    width: 380px;
+    color: black;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.loginWrap form #submit {
+    width: 380px;
+    height: 50px;
+    margin-top: 10px;
+    border: none;
+    background: #000;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.joinbtn{margin: 15px;}
+.joinbtn a{margin: 5px; color: #ccc;}
+
+.snslogin_text{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* 부모 요소의 너비 설정 */
+    margin: 25px 0; /* 상하 여백 */
+}
+
+.snslogin_text::before, .snslogin_text::after {
+    content: "";
+    flex-grow: 1; /* 수평선의 확장 비율 */
+    border-top: 1px solid #ebebeb; /* 수평선 스타일 */
+    margin: 0 20px; /* 수평선과 텍스트 사이 간격 */
+}
+
+.snslogin_text span {
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    font-size: 16px; 
+    color: #ccc;
+}
+
+/* ========== sns로 로그인하기 버튼 시작 ========== */
+/* .snsloginwrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 380px; 
+} */
+
+.snsbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 380px; 
+    height: 50px; 
+    margin: 10px auto;
+
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+svg{
+    margin-right: 8px;
+}
+.naver {
+    background-color: #03c75a; /* 네이버 녹색 */
+}
+  
+.kakao {
+    background-color: #fee500; /* 카카오톡 노란색 */
+    color: #3c1e1e; /* 카카오톡 텍스트 색상 */
+}
+  
+.google {
+    background-color: #ffffff; /* 구글*/
+    border: 1px solid #ccc;
+    color: #858585;
+}
+  
+/* 버튼에 마우스를 올렸을 때 스타일 */
+.snsbtn:hover {
+    opacity: 0.9;
+}

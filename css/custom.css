@@ -1,0 +1,84 @@
+body{width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+li,ul,ol{text-decoration: none;
+         list-style: none;
+        color: black;}
+
+a{text-decoration: none;
+color: black;}    
+
+
+
+
+   
+    .responsive-image {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      min-width: 0auto;
+      max-height: 464px; /* 이미지 최대 너비 지정 */
+    }
+    
+    @media (max-width: 768px) {
+      .responsive-image {
+        max-width: 0 auto;} /* 화면 너비가 768px 이하인 경우 이미지 최대 너비를 500px로 조정 */
+    }
+    .logo {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        min-width: 21.45px; /* 이미지 최대 너비 지정 */
+        min-height: 30px ;
+      }
+      
+      @media (max-width: 400px) {
+        .logo {
+          max-width: 21.45px;} /* 화면 너비가 768px 이하인 경우 이미지 최대 너비를 500px로 조정 */
+      }
+     
+      .img11 {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        min-width: 21.45px; /* 이미지 최대 너비 지정 */
+        min-height: 30px ;
+      }
+      
+      @media (max-width: 400px) {
+        .img11 {
+          max-width: 21.45px;} /* 화면 너비가 768px 이하인 경우 이미지 최대 너비를 500px로 조정 */
+      }
+     
+      .gal2{
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        min-width: 21.45px; /* 이미지 최대 너비 지정 */
+        min-height: 30px ;
+      }
+      
+      @media (max-width: 400px) {
+        .gal2 {
+          max-width: 21.45px;} /* 화면 너비가 768px 이하인 경우 이미지 최대 너비를 500px로 조정 */
+      }
+     
+      .gal4{
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        min-width: 21.45px; /* 이미지 최대 너비 지정 */
+        min-height: 30px ;
+      }
+      
+      @media (max-width: 400px) {
+        .gal4 {
+          max-width: 21.45px;} /* 화면 너비가 768px 이하인 경우 이미지 최대 너비를 500px로 조정 */
+      }
+     

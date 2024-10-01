@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+
+html {
+    font-size: 10px;
+    }
+
+ul, li {
+    list-style: none;
+    }
+
+a {
+    text-decoration: none;
+    color: inherit;
+    }
+
+.wrap{width: 1200px;
+    height: 0auto;
+    margin: 0 auto;
+    position: relative;
+    
+    }
+    
+     /* 헤더 영역 스타일시트 시작 */
+.header{
+    position: fixed;
+    top: 0;
+    left: auto;
+    width: 100%;
+    height: 170px;
+    max-width: 1200px;
+    background-color: white; /* 배경색을 지정하여 고정된 헤더가 겹치는 것 방지 */
+    font-size: 18px;
+    font-weight: bolder;
+    border-bottom:  1px solid #ccc;
+    }
+
+.header > .nav {
+    width: 100%;
+    margin-top: 130px;
+    }
+
+.header > .nav>ul{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+     }
+
+div.nav>ul>li:hover{
+    text-decoration: underline;
+    }
+
+.wrap>.header>.logo{
+    float: left;
+    margin-top: 30px;
+    }
+
+.wrap>.header>.login{
+    float: right;
+    margin-top: 50px;
+    font-size: 18px;
+    }
+
+.wrap>.header>.login>a{
+    color: #ccc;
+    }
+    
+/* 로그인 버튼 영역 */
+   
+.wrap>.header>.login{
+    float: right;
+    margin-top: 50px;
+    }
+
+    .wrap>.header>.login>a{
+        color: #ccc;
+               }
+        
+        .wrap>.header>.login>a:hover{ 
+            text-decoration: underline;
+                        /* 로그인/가입하기 호버 추가 20240929 */
+            cursor: pointer;}
+
+
+/*랜드마크 게시판 영역 시작*/
+.mapWrap {
+    width: 1200px;
+    margin: 100px auto;
+    margin-top: 230px;
+}
+
+.mapTop{
+    margin-bottom: 30px;
+}
+
+.mapTop h1 {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+}
+
+.mapTop p {
+    margin-top: 5px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+}
+
+.mapLstyle {
+    width: 100%;
+    height: 500px;
+}
+
+
+/*mapText 시작*/
+
+.mapText{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 12px; 
+    overflow: hidden;
+}
+
+.maptable {
+    width: 100%;
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+.mapTtbody{
+    font-size: 1.6rem;
+}
+
+.MTfirst{
+    width: 20%;
+    padding: 20px;
+    border-bottom: 2px solid white;
+    text-align: right;
+    padding-right: 20px;
+    background-color: black;
+    font-weight: black;
+    color: white;
+}
+
+.MTsecond{
+    width: 80%;
+    padding: 20px;
+    border: 2px solid black;
+    padding-left: 20px;
+}
+
+.MTsecond h1 {
+    font-size: 2rem;
+}
+
+
+/*이미지 영역*/
+
+.mapImg{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.MIcontain{
+    width: 180px; /*조정할 부분*/
+    height: 180px;
+    
+}
+
+.MCimg{
+    border-radius: 20px;          
+}
+.MCimg:hover{transition: transform 0.3s ease;}/* 이미지 호버시 크기 변화 */
+
+.MCimg:hover:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    
+    }
+    
+.MCimg:hover {
+        transition: box-shadow 0.3s ease;/* 이미지 호버시 음영효과  */
+        cursor: pointer;
+    }
+    
+    .MCimg:hover:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+
+.MCtext{
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+/* 푸터부분 css 추가 20240928 03:36 */
+.footer{ 
+    width: 1200px;
+    padding: 5px;
+    top: 800px;
+    margin: 20px auto;
+    background: #ffffff;
+}
+    .footp1{
+    width: 400px;
+    display: inline-flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: 10px auto;
+    font-size: 14px;
+    align-items: left;
+    }
+    .footp1>a{
+        color:#bcbcbc;
+    }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="../css/basic.css" />
+    <!--  <link rel="stylesheet" href="practice.css"> -->
+    <link href="../css/login.css"  rel="stylesheet" />
+
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", function(){
+            let form = document.querySelector('form'); // 폼 요소
+            const userid = document.getElementById('id'); 
+            const userpw = document.getElementById('pw');
+            let submit = document.getElementById('submit');  
+            
+            form.addEventListener('submit', function(event) {
+                // 아이디 입력 안되어 있을 경우
+                if (userid.value === "") {
+                    alert("아이디를 입력해 주세요.");
+                    userid.focus(); // 커서 아이디 칸으로 이동
+                    event.preventDefault(); // 폼 제출 막기
+                    return false;
+                }
+                // 비밀번호 입력 안되어 있을 경우
+                if (userpw.value === "") {
+                    alert("비밀번호를 입력해 주세요.");
+                    userpw.focus(); // 커서 비밀번호 칸으로 이동
+                    event.preventDefault(); // 폼 제출 막기
+                    return false;
+                }
+    
+                // 테스트
+                let testid = "asdf";
+                let testpw = "1234";
+    
+                let enteredId = userid.value;
+                let enteredPw = userpw.value;
+    
+                // 아이디와 비밀번호 체크
+                if (enteredId !== testid || enteredPw !== testpw) {
+                    alert("아이디와 비밀번호가 틀립니다.");
+                    event.preventDefault(); // 폼 제출 막기
+                    return false;
+                } else {
+                    alert(enteredId + " 떼꺼워ㅋ님 반갑습니다.");
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="loginWrap">
+        <div class="loginLogo"> <a href="../index.html"><img src="../images/minilogo.png"> </a></div>
+
+        <form action="" method="post" name="form">
+            <div>&nbsp;&nbsp;&nbsp;아이디 <input id="id" type="text" class="form-control" placeholder="아이디를 입력하세요">
+            </div>
+            <div>비밀번호 <input id="pw" type="password" class="form-control" placeholder="비밀번호를 입력하세요">
+            </div>
+            <button id="submit">가입하기</button>
+        </form>
+        <div class="joinbtn">
+            <a href="./joinus.html">회원가입 ></a>
+            <a href="./joinus.html">아이디/비밀번호 찾기 ></a>
+        </div>
+        
+            <div class="snslogin_text">
+            <span>SNS로 로그인</span>
+            </div>
+
+            <button class="snsbtn naver">
+                <!-- <img src="naver-icon.png" alt="Naver"> --> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" viewBox="0 0 21 21" data-v-4f1dd06a="">
+                <path fill="#fff" d="M4 16.717h4.377V9.98l4.203 6.737H17v-13h-4.377v6.737l-4.16-6.737H4v13Z"></path></svg>
+                 네이버로 로그인
+            </button>
+            <button class="snsbtn kakao">
+                <!-- <img src="kakao-icon.png" alt="Kakao"> --> 
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                width="21" height="21" fill="#3C1E1E" viewBox="0 0 21 21" data-v-4f1dd06a="">
+                <path fill="current" d="M10.5 3.217c4.514 0 8 2.708 8 6.004 0 3.758-4.045 6.184-8 5.892-1.321-.093-1.707-.17-2.101-.23-1.425.814-2.728 2.344-3.232 2.334-.325-.19.811-2.896.533-3.114-.347-.244-3.157-1.329-3.2-4.958 0-3.199 3.486-5.928 8-5.928Z"></path></svg>
+                 카카오톡으로 로그인
+            </button>
+            <button class="snsbtn google">
+                <!-- <img src="google-icon.png" alt="Google">  -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" viewBox="0 0 21 21" data-v-4f1dd06a=""><path fill="#4285F4" d="M18.18 10.398c0-.567-.05-1.113-.145-1.636H10.5v3.094h4.306a3.68 3.68 0 0 1-1.597 2.415v2.007h2.586c1.512-1.393 2.385-3.443 2.385-5.88Z"></path><path fill="#34A853" d="M10.5 18.216c2.16 0 3.97-.716 5.294-1.938l-2.585-2.007c-.717.48-1.633.763-2.71.763-2.083 0-3.847-1.407-4.476-3.298H3.351v2.073a7.997 7.997 0 0 0 7.149 4.407Z"></path><path fill="#FBBC05" d="M6.024 11.738c-.16-.48-.251-.993-.251-1.52 0-.528.09-1.04.25-1.52V6.625H3.352a7.997 7.997 0 0 0-.851 3.593c0 1.29.31 2.512.85 3.592l2.674-2.072Z"></path><path fill="#EA4335" d="M10.5 5.399c1.174 0 2.229.403 3.058 1.196L15.852 4.3c-1.385-1.29-3.196-2.083-5.352-2.083a7.997 7.997 0 0 0-7.15 4.407l2.673 2.073c.63-1.891 2.393-3.298 4.477-3.298Z"></path></svg>
+                 구글로 로그인
+            </button>
+            <script src="practice.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커뮤니티</title>
+    <link rel="stylesheet" href="../css/community_css.css" />
+    <!--폰트어썸 아이콘-->
+    <script src="https://kit.fontawesome.com/fd806cec8d.js" crossorigin="anonymous"></script>
+    <script>
+
+    
+    /* 제목글 클릭시 모달 창 */
+    document.addEventListener("DOMContentLoaded",function(){
+            const modalBox=document.querySelector("#modalBox");
+            const open=document.querySelector("#openModal");
+            const close=document.querySelector("#openModal");
+            
+            const toggleBtn = function(){
+             modalBox.classList.toggle("active");
+            }
+            open.addEventListener("click",toggleBtn); //주의! 함수명에()없음
+            close.addEventListener("click",toggleBtn);
+
+        }); 
+
+    /* 이미지 모아보기 클릭시 모달 창 */
+    document.addEventListener("DOMContentLoaded",function(){
+            const modalBox=document.querySelector("#modalBox");
+            const open=document.querySelector("#imagegallery");
+            const close=document.querySelector("#close");
+            
+            const toggleBtn = function(){
+             modalBox.classList.toggle("active");
+            }
+            open.addEventListener("click",toggleBtn); //주의! 함수명에()없음
+            close.addEventListener("click",toggleBtn);
+
+        }); 
+
+    /* 비회원의 경우 수정 버튼 클릭시 경고창 */
+     function modify(){
+        alert('로그인 후 가능합니다!');
+        if (!confirm("회원가입은 '확인'을 안함은 '취소'를 선택해주세요.")) {
+            alert("또 방문해 주세요 :)");
+        } else {
+            alert("회원가입을 진행하겠습니다!");
+        }
+    }
+
+        
+    </script>
+</head>
+<body>
+    <!-- 헤더부분 전체를 감싸는 박스 -->
+    <div class="wrap">
+        <!-- 로고와 로그인/회원가입 네비바를 감싸는 박스 -->
+        <div class="header">
+                <div class="login"><a href="./login.html">로그인/회원가입</a></div>
+                <div class="logo"><a href="../index.html"><img src="../images/minilogo.png" alt=""></a></div>
+            <!-- 네비바를 감싸는 박스 -->
+            <div class="nav">
+                <ul>
+                    <li><a href="#">산책로</a></li>
+                    <li><a href="#">자주찾는 명소</a></li>
+                    <li><a href="../html/map.html">랜드마크</a></li>
+                    <li><a href="#">자연/공원</a></li>
+                    <li><a href="../html/community.html">커뮤니티</a></li>
+                </ul>
+            </div><!-- nav 끝 -->
+            <!-- <hr style="margin:auto; margin-top: 10px; color:#ececec;"> -->
+        </div><!-- header 끝 -->
+        
+    </div>
+    
+
+
+
+    <!-- 게시판 전체 영역 -->
+    <div class="board_wrap">
+        <!-- 타이틀 영역 -->
+        <div class="board_title">
+            <h1>이장소 좋아요!</h1>
+            <p>#나만의장소&nbsp;&nbsp;#떼꺼워ㅋ니까알려줌..</p>
+        </div>
+        <div class="board_list_wrap">
+            <div class="board_list">
+                <div class="top">
+                    <div class="num">번호</div>
+                    <div class="title">제목</div>
+                    <div class="id">떼워커</div>
+                    <div class="date">작성일</div>
+                    <div class="count">조회</div>
+                    <div class="file">나만의장소</div>
+                </div>
+                <div>
+                    <div class="num">5</div>
+                    <div class="title"><a href="#" id="openModal">가을엔 역시 경주 산책로 넘 좋아해랑~~</a></div>
+                    <div class="id">김해랑</div>
+                    <div class="date">2024.09.28</div>
+                    <div class="count">52</div>
+                    <div class="file"><a href="#"><i class="fa-regular fa-image"></i></a></div>
+                </div>
+                <div>
+                    <div class="num">4</div>
+                    <div class="title"><a href="#">서울 산책 명소는 남산타워 언제가도 좋아용</a></div>
+                    <div class="id">박세온</div>
+                    <div class="date">2024.09.27</div>
+                    <div class="count">65</div>
+                    <div class="file"><a href="#"><i class="fa-regular fa-image"></i></a></div>
+                </div>
+                <div>
+                    <div class="num">3</div>
+                    <div class="title"><a href="#">올해도 경기광주 단풍명소 사전예약 한대요~!</a></div>
+                    <div class="id">이세라</div>
+                    <div class="date">2024.09.26</div>
+                    <div class="count">104</div>
+                    <div class="file"><a href="#"><i class="fa-regular fa-image"></i></a></div>
+                </div>
+                <div>
+                    <div class="num">2</div>
+                    <div class="title"><a href="#">떼워커만 보세요 ※예쁨 주의※</a></div>
+                    <div class="id">나도떼워커</div>
+                    <div class="date">2024.08.28</div>
+                    <div class="count">25,050</div>
+                    <div class="file"><a href="#"><i class="fa-regular fa-image"></i></a></div>
+                </div>
+                <div>
+                    <div class="num">1</div>
+                    <div class="title"><a href="#">더울때는 롯데몰이 최고네요..</a></div>
+                    <div class="id">나는떼워커</div>
+                    <div class="date">2024.08.13</div>
+                    <div class="count">1,023</div>
+                    <div class="file"><a href="#"><i class="fa-regular fa-image"></i></a></div>
+                </div>
+            </div>
+            <!-- 페이징 부분 -->
+            <div class="board_page">
+                <a href="#" class="bt first"><<</a>
+                <a href="#" class="bt prev"><</a>
+                <a href="#" class="num on">1</a>
+                <a href="#" class="num">2</a>
+                <a href="#" class="num">3</a>
+                <a href="#" class="num">4</a>
+                <a href="#" class="num">5</a>
+                <a href="#" class="bt next">></a>
+                <a href="#" class="bt last">>></a>
+            </div>
+            <div class="bt_wrap">
+                <a href="../html/login.html" class="upload">등록</a>
+                <button onclick="javascript:modify()"> 수정 </button>
+
+                <!-- <a href="#이미지로 보기 페이지로" class="imagegallery">이미지로 모아보기</a> -->
+                <button id="imagegallery">이미지로 모아보기</button>
+                <div id="modalBox"><!-- 모달: 팝업창 -->
+                    
+                    <div class="modalContent">
+                        <div id="gallerywrap">
+                            <div class="gallery">
+                                <h1>떼꺼워ㅋ 이장소 좋아요.zip</h1>
+                                <div class="youtube1">
+                                <iframe class="y1" width="212" height="135" src="https://www.youtube.com/embed/0kLHsx_VvV4?start=90&autoplay=1&mute=1" title="여름에 걷기 좋은 명품 숲길 best 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe class="y2" width="212" height="135" src="https://www.youtube.com/embed/2vWFZi7k7ps?start=120&autoplay=1&mute=1" title="[ENG] 맥문동이 활짝 핀 서울 걷기 좋은 숲길 🌲메타세콰이어 + 맥문동꽃이 아름다운 곳" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe class="y3" width="212" height="135" src="https://www.youtube.com/embed/Sr92GG2ouAU??start=90&autoplay=1&mute=1" title="가을에 꼭! 가봐야하는 아름다운 여행지 베스트 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe class="y4" width="212" height="135" src="https://www.youtube.com/embed/Sr92GG2ouAU?start=200&autoplay=1&mute=1" title="가을에 꼭! 가봐야하는 아름다운 여행지 베스트 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe class="y5" width="212" height="135" src="https://www.youtube.com/embed/KHjPjSbJOKg?start=10&autoplay=1&mute=1" title="Vlog | 더워도 외출은 포기할 수 없어 | 서울 브이로그 | 해방촌 신흥시장, 이태원 | 연희동 작업하기 좋은 카페 | 업스탠딩커피 | 아키텍트, 드윌 플리마켓" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe class="y6" width="212" height="135" src="https://www.youtube.com/embed/yf8ClkTvZ9U?start=10&autoplay=1&mute=1" title="서울 vlog | 해방촌에서 혼자 노는 법 | 카페 타자기, 일몰, 소품샵, 이태원" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe class="y7" width="212" height="135" src="https://www.youtube.com/embed/aJu_1AzRWeo?start=30&autoplay=1&mute=1" title="여기가 서울이라고? 서울토박이도 잘 모르는 숨겨진 서울 여행지 9곳만 꼽아서 소개해 드릴게요. 참고하셔서 즐거운 여행 하시기 바랍니다." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe class="y8" width="212" height="135" src="https://www.youtube.com/embed/EfqkLG6r7YM?start=10&autoplay=1&mute=1" title="연희동 나만따라와🧔🏻‍♀️🍀연희동투어 브이로그•엽서가게•포셋•디저트맛집•옵젵상가•빈티지샵•조앤도슨•편집샵•연남동맛집•프렌치토스트•장갑만들기" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe class="y9" width="212" height="135" src="https://www.youtube.com/embed/HOCfCWJyT78?start=20&autoplay=1&mute=1" title="서울 가볼만한곳 베스트 10 (국내여행)(2)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe class="y10" width="212" height="135" src="https://www.youtube.com/embed/BBvf9KOGIFA?start=8&autoplay=1&mute=1" title="겨울에 걷기 좋은곳 / 설악산 / 비선대 / 아야진해변 / 힘들 땐 옆으로 걸어요 / 게걸음" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe class="y11" width="212" height="135" src="https://www.youtube.com/embed/ygdFgs3i6Ak?start=8&autoplay=1&mute=1" title="서울에서 가장 달리기 좋은 코스 TOP 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe class="y12" width="212" height="135" src="https://www.youtube.com/embed/OoyzCAr1cEY?start=39&autoplay=1&mute=1" title="늦가을 / 걷기좋은 곳 / 석모도 / 힘들 땐 옆으로 걸어요 / 게걸음" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+                                    <form action="" method="post" name="button">
+                                        <button id="showmore" type="button" 
+                                        onclick="location.href='https://www.youtube.com/results?search_query=%EC%82%B0%EC%B1%85%ED%95%98%EA%B8%B0+%EC%A2%8B%EC%9D%80+%EA%B3%B3','_blank' "style="margin-top: 20px;">
+                                            <i class="fas fa-heart"></i>&nbsp;&nbsp;많은 명소를 더 보고싶어요!</button>
+                                      </form>                              
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <button id="close">&times; </button> <!-- 버튼 안에 아이콘: & 입력하고 ctrl + space 로 미리보기 -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 푸터 영역 시작 -->
+    <footer class="footer">
+        <div><p class="footp" style="font-size: 12px; color: #bcbcbc;">(주)산책로
+
+            주소 : 서울특별시 강남구 봉은사로 000, 000타워 5층 | 대표이사 : (주)산책로 | 사업자등록번호 : 000-00-00000사업자정보확인
+            전자우편주소 : takeawalk@naver.com | 통신판매번호 : 2017-서울강남-01779 | 관광사업자 등록번호 : 제0000-00호 | 
+            전화번호 : 0000-0000 | 호스팅서비스제공자의 상호 표시 : (주)산책로 (주)산책로는 통신판매중개자로서 통신판매의 당사자가 아니며, 
+            상품의 예약, 이용 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.
+            </p></div >
+            <div class="footp1">
+            <a href="#">이용약관</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">소비자 분쟁해결 기준</a>
+            <a href="#">회사번호</a></div>
+            <p style="font-size: 10px; color: #bcbcbc; margin-bottom: 30px;">Copyright TakeaWalk COMPANY Corp. All rights reserved.</p>
+
+     </footer>
+
+</body>
+</html> 

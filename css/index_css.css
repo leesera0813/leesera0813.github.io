@@ -1,0 +1,237 @@
+body{font-size: 18px;
+    font-weight: bolder;
+background-image: url("../images/miniproject.jpg");
+background-repeat: no-repeat;
+/* background-attachment: fixed;  확인 필요*/
+background-position:0px 170px;
+}
+
+.wrap{width: 1200px;
+height: 0auto;
+margin: 0 auto;
+position: relative;
+
+}
+
+ /* 헤더 영역 스타일시트 시작 */
+ 
+ .header{
+        position: absolute;
+        top:0;
+        width: 100%;
+        height: 170px;
+   /* background-color: aqua;  */
+        border-bottom:  1px solid #ccc;
+   }
+/* .header{
+     position: absolute;
+     top:0;
+     width: 100%;
+     height: 170px;
+    border-bottom:  1px solid #ccc;
+    } */
+
+/* header: 헤더 영역을 상단에 고정 */
+
+   .nav {width: 100%;
+   /* background-color: aliceblue; */
+         margin-top: 130px;
+   /* display: flex; */
+   
+    }
+
+    div.nav>ul{
+        display: flex;
+        justify-content: space-between;
+       }
+   
+    div.nav>ul>li:hover{text-decoration: underline;}
+
+   .wrap>.header>.logo{
+    float: left;
+    margin-top: 30px;}
+
+    
+   
+    /* 로그인 버튼 영역 */
+   
+   .wrap>.header>.login{
+    float: right;
+    margin-top: 50px;
+           }
+
+   
+   
+    .wrap>.header>.login>a{
+    color: #ccc;
+           }
+    
+    .wrap>.header>.login>a:hover{ 
+        text-decoration: underline;
+                    /* 로그인/가입하기 호버 추가 20240929 */
+        cursor: pointer;}
+
+   
+
+
+
+   /* mainbnner 영역 스타일 시트 시작 */
+
+
+   .mainbanner{width: 1200px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 370px;
+    border-radius: 15px;}
+
+   
+   
+   
+    .btn{    /* 검색버튼 */
+    position: absolute; 
+    top: 80px;
+    right: 60px;
+    width: 260px;
+    height: 64px;
+    border-radius: 60px;
+        }
+
+
+   .btn >input{
+    width: 260px;
+    height: 64px;
+    border-radius: 60px;}
+   
+   
+    .searchbar{
+        position: absolute;
+        top: 80px;
+        left: 60px;
+    }
+              
+
+
+   .search input{
+      font-size: 18px; /* 검색바 영역 input 태그 글자 굵기 */
+      font-weight: bolder;}
+   
+   .search{
+    display: inline-block;
+   }
+   
+   .search .btn{
+    font-size: 18px;} 
+
+
+   .search .btn:hover{ cursor: pointer;}
+   
+   
+ 
+   
+   
+   
+   
+   
+   /* 자주찾는명소,랜드마크 영역 스타일 시트 */
+   
+   
+   .img1{/* 자주 찾는 명소 */
+       position: absolute;
+       top: 413px;
+       display: flex;
+       justify-content: space-between;
+       width: 100%;
+       height: 0 auto;
+      }
+
+    .img1 img{ /* 자주 찾는 명소 */
+       border-radius: 15px;}
+       
+    .img1text{position: absolute;
+       top: 358px;
+        }
+    
+    
+    .img1 img:hover{transition: transform 0.3s ease;}/* 이미지 호버시 크기 변화 */
+
+    .img1 img:hover:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    
+    }
+    
+    .img1 img:hover {
+        transition: box-shadow 0.3s ease;/* 이미지 호버시 음영효과  */
+        cursor: pointer;
+    }
+    
+    .img1 img:hover:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+
+   
+
+
+
+    .img2{
+       position: absolute;/* 랜드마크*/
+       top: 650px;
+       display: flex;
+       justify-content: space-between;
+       width: 100%;
+       height: 0 auto;
+       
+     }
+    
+     .img2 img{    
+        border-radius: 15px;}
+
+    
+    .img2text{
+       
+       position: absolute;/* 랜드마크*/
+       top: 596px;}
+    .img2 img:hover{transition: transform 0.3s ease;cursor: pointer;}/* 이미지 호버시 크기 변화 */
+    
+    
+    .img2 img:hover:hover {
+        transform: scale(1.1);
+        
+    
+    }
+    
+    .img2 img:hover {
+        transition: box-shadow 0.3s ease;/* 이미지 호버시 음영효과  */
+    }
+    
+    .img2 img:hover:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+   
+     
+
+       
+      /* 푸터부분 css 추가 20240928 03:36 */
+      .footer{ 
+       padding: 5px;
+       position: absolute;
+       top: 827px;
+       margin: 50px 0;
+       background: #ffffff;
+   }
+      .footp1{
+       width: 400px;
+       display: flex;
+       -webkit-box-pack: justify;
+       justify-content: space-between;
+       margin: 10px 0;
+       font-size: 14px;
+       
+       }
+       .footp1>a{
+           color:#bcbcbc;
+       }
+      
+       .footp1>a:hover {text-decoration: underline;} 

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../css/joinus_css.css" type="text/css">
+</head>
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+   document.addEventListener("DOMContentLoaded",function(){
+      const post_btn = document.querySelector("#post_btn");  //우편번호 버튼
+      const post = document.querySelector("#post"); //우편번호 입력
+      const address = document.querySelector("#address");  //기본주소
+      const detail_address = document.querySelector("#detail_address");  //상세주소
+
+      post_btn.addEventListener("click", function(){
+         new daum.Postcode({
+              oncomplete: function(data) {  //data - 다음에서 보내 주는 우편번호및주소
+                post.value = data.zonecode;  //우편번호 넣기
+
+                    let fullAddress=""; //전체 주소
+                    let extendAddress=""; // 추가 주소, 건물 동명 등....
+
+                  //기본 주소
+                  if(data.userSelectedType==="R"){ //도로명 선택
+                    fullAddress = data.roadAddress;
+                  }else{ //지번을 선택
+                    fullAddress = data.jibunAddress;
+                  }
+               
+                //추가 건물명에 대한 설정
+                  if(data.userSelectedType === "R"){
+                    if(data.bname !==""){ //법정동/법정리 이름이 있으면
+                      extendAddress += data.bname;  // extendAddress = extendAddress + data.bname;
+                    }
+                    if(data.buildingName !== ""){ //빌딩명이 있으면
+                     extendAddress += (extendAddress !=="")? (", " + data.buildingName) : data.buildingName;
+                     //extendAddress = extendAddress + ( (extendAddress !=="")? ", " + data.buildingName : data.buildingName);
+                     }
+
+                  fullAddress +=((extendAddress !=="")? "(" + extendAddress + ")" : "");  
+                 }
+                //  address1.value = fullAddress;
+                document.membership.address.value=fullAddress;
+               
+                detail_address.focus();  // 상세주소칸에 커서를 놓기    
+                 }
+       }).open();
+      });
+   });  
+/* 우편 번호 입력끝 */
+
+function memberCheck(){
+
+const userid = document.querySelector("#userid");
+
+if(userid.value ===""){
+        alert("회원 아이디가 입력되어 있지 않습니다")
+        
+        userid.focus();//id 입력할 곳에 커서를 놓음
+        
+        return false;
+
+}
+
+}
+document.addEventListener("DOMContentLoaded",function(){
+
+    const submit = document.querySelector(".submit")
+
+/* 회원가입시 아이디 입력 안되어 있으면 아이디 창으로 이동 */
+
+})
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+            const password = document.querySelector('#password');
+            const confirmPassword = document.querySelector('#confirm_password');
+            const passwordStatus = document.querySelector('#password_status');
+
+            confirmPassword.addEventListener('input', function() {
+                if (password.value !== confirmPassword.value) {
+                    passwordStatus.textContent = '비밀번호가 일치하지 않습니다.';
+                    passwordStatus.className = 'error';
+                } else {
+                    passwordStatus.textContent = '비밀번호가 일치합니다.';
+                    passwordStatus.className = 'success';
+                }
+            });
+        });
+        /* 비밀번호 확인 */
+</script>
+<body>
+    
+    <div class="logo"> <a href="../index.html"><img src="../images/minilogo.png" alt="오류"></a></div>
+    <div class="h2"><h2>회원가입을 위해 정보를 입력해 주세요.</h2></div>
+    
+    
+    <form action="#" method="post" name="membership"  onsubmit="return memberCheck();">
+        <div class="form_group">
+            <label for="userid">아 이 디</label>
+            <input type="text" id="userid" name="userid"  placeholder="아이디를 입력하세요(16자 내외로 입력하세요)" autocomplete="off" maxlength="16">
+            
+        </div>
+   
+    <div class="form_group">
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" name="password" required placeholder="비밀번호를 입력하세요(16자 내외로 입력하세요)" maxlength="16" >
+        
+    </div>
+   
+    <div class="form_group">
+        <label for="confirm_password">비밀번호 확인</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+        <span id="password_status"></span>
+    </div>
+
+    <div class="form_group">
+        <label for="user_name">이 름</label>
+        <input type="text" id="user_name" name="user_name" required placeholder="이름을 입력하세요.." autocomplete="off">
+    </div>
+
+    <div class="form_group">
+        <label for="gender">성별</label>
+        <div class="genderbox">
+        <input type="radio" id="gender" name="gender" value="m" style="width: 20px; height: 20px; margin-left: 20px;" > 남 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" id="gender" name="gender" value="f" style="width: 20px; height: 20px;"> 여 <!-- css input 크기 조정중 따로 빼지 못해서 body 에 스타일값 적용 -->
+        </div>
+</div>
+    <div class="form_group">
+        <label for="phone">휴대폰 번호</label>
+        <input type="tel" id="phone" name="phone" required placeholder ="-를 빼고 번호만 입력하세요.." autocomplete="off" maxlength="13" pattern="[0-9]+" title="숫자만 입력 가능합니다."> <!-- 전화 번호 13자리 까지만 입력,숫자만 입력 가능 -->
+    </div>
+
+    <div class="form_group">
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" required autocomplete="off">
+    </div>
+
+    <div class="form_group">
+        <label for="post">우편번호</label>
+        <input type="button" value="우편번호" id="post_btn" name="post_btn" 
+               style="width: 80px; height: 50px; font-size: 18px; border-radius: 10px; margin-right: 10px; background-color: black;
+               color: white;
+           font-weight: bolder;"><!-- css input 크기 조정중 따로 빼지 못해서 body 에 스타일값 적용 -->
+        <input type="text" id="post" name="post" required autocomplete="off">
+    </div>
+
+    <div class="form_group">
+        <label for="address">주소</label>
+        <input type="text" name="address" id="address" autocomplete="off">
+        
+    </div>
+    <div class="form_group">
+        <label for="detail_address">상세주소</label>
+        <input type="text" name="detail_address" id="detail_address" autocomplete="off">
+    </div>
+        
+    <div class="namebtn"><input type="button" id="namebtn" value="중복체크" 
+         style="font-size: 18px; border-radius: 10px;background-color: black;
+             color: white;
+         font-weight: bolder; " 
+         ></div><!-- 중복체크 버튼 -->
+         
+         
+         <div class="submitBtn">
+         <input type="submit" class="submit1" style="width: 80px; height: 50px; font-size: 18px; border-radius: 42px;" value="가입">
+         <input type="reset" class="submit1" style="width: 80px; height: 50px; font-size: 18px; border-radius: 42px;" value="수정"> 
+        </div>
+
+    </form>
+    
+    
+   
+
+
+
+</body>
+</html>

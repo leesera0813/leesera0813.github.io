@@ -1,0 +1,136 @@
+body {
+    margin: 0 auto;
+    width: 1200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{    margin-bottom: 20px;
+}
+.h2{margin-bottom: 15px;}
+
+form
+{flex-direction: column;
+width: 800px;
+height: 703px;
+margin: 20px;
+display: flex;
+justify-content: space-evenly;
+background-color: rgba(255, 255, 255, 0.54);
+position: relative;/* 중복체크 버튼 옮기는 방법 모름 */}
+
+.form_group{
+   
+  
+    display: flex;
+    justify-content: end;  /* 인풋박스 기준 정렬 잡으려고 만듬 */
+    width: 600px;         
+    height: 0 auto;
+    font-size: 20px;
+    font-weight: bolder;
+   }
+
+
+            
+
+
+   input::placeholder {
+    font-size: 16px; 
+    color: #999; 
+    padding-left: 10px;}   /* 인풋안에 placehoer text 사이즈 변경 */
+    
+    .form_group>input{   /* 인풋박스 크기 지정 */
+        width: 400px;
+        height: 50px;
+        margin: 0;
+        padding: 0;}
+        
+        .form_group>input#post{width: 310px;}
+        
+        
+    .form_group .genderbox {
+    
+         width: 402px;
+         height: 53px;              /* gender 박스에 보더박스 만들기 위해 */
+         border: 1px solid rgb(99, 99, 99);
+         display: flex;
+         align-items: center;
+         background-color: #fff;}
+                  
+                
+    .form_group >label {
+        display: flex;     /* 폼 안에 텍스 레이블 수직 정력 */
+        align-items: center;
+        padding: 10px;        }
+
+      
+   
+        
+    
+    
+    
+    
+    .namebtn{    
+        display: flex;
+        width: 86px;    /* 중복버튼 위치 변경 모름 */
+        height: 50px;
+        position: absolute;
+        right: 103px;
+        top: 6px;
+    }
+    
+    #namebtn {
+        font-size: 18px;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        font-weight: bolder;
+        cursor: pointer; 
+       
+    }
+
+    #namebtn:hover {  transform: scale(1.1);
+        
+        color: white; 
+    }
+
+
+    #post_btn {
+        font-size: 18px;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        font-weight: bolder;
+        cursor: pointer; 
+        
+    }
+
+    #post_btn:hover {  transform: scale(1.1);
+        
+        color: white; 
+    }
+    
+    .submitBtn {
+        margin-left: 36%;
+    }
+    
+    .submit1{background-color: black;
+        color: white;
+    font-weight: bolder;
+     margin: 10px;}
+
+    .submit1:hover{cursor: pointer;
+transform: scale(1.1);}
+
+
+#password_status{font-size: smaller;
+                 position: absolute;
+                top: 145px;} /* 창 밖으로 글자가 벗어나서 position 줌 */
+
+
+
+.success{color: green;} /* 중복체크 글자색 */
+.error{color: red;}
